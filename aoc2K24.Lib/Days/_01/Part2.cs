@@ -7,8 +7,8 @@ internal class Part2(string locationPath = "./", string filePath = "Days/_01/dat
     public override Task<string> Run(string[] lines)
     {
         var pairs = lines.Select(l => l.Split("   ")).Select(l => (l[0], l[1]));
-        var left = pairs.Select(p => Convert.ToInt32(p.Item1, CultureInfo.InvariantCulture)).OrderBy(i => i).ToList();
-        var right = pairs.Select(p => Convert.ToInt32(p.Item2, CultureInfo.InvariantCulture)).OrderBy(i => i).ToList();
+        var left = pairs.Select(p => Convert.ToInt32(p.Item1, CultureInfo.InvariantCulture)).ToList();
+        var right = pairs.Select(p => Convert.ToInt32(p.Item2, CultureInfo.InvariantCulture)).ToList();
         var result = 0;
         for (int i = 0; i < left.Count; i++)
         {
