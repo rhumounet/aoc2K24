@@ -1,0 +1,11 @@
+<Project>
+	<PropertyGroup>
+		<Description>Advent of code 2K24</Description>
+		<Authors>rhumounet</Authors>
+		<TargetFramework>net9.0</TargetFramework>
+		<LangVersion>13</LangVersion>
+		<RootNamespace>aoc2K24</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+</Project>
