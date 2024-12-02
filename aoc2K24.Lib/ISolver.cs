@@ -1,5 +1,5 @@
 ﻿namespace aoc2K24;
-internal interface ISolver
+public interface ISolver
 {
-    Task<string> Result();
+    Task<(string result, double elapsed)> Result();
 }

@@ -2,8 +2,9 @@
 
 namespace aoc2K24.Days._01;
 
-internal class Part1(string locationPath = "./", string filePath = "Days/_01/data.txt") : AbstractSolver($"{locationPath}{filePath}")
+public class Part1(string filePath) : AbstractSolver(filePath)
 {
+    public Part1() : this("Days/_01/data.txt") { }
     public override Task<string> Run(string[] lines)
     {
         var pairs = lines.Select(l => l.Split("   ")).Select(l => (l[0], l[1]));
@@ -18,7 +19,7 @@ internal class Part1(string locationPath = "./", string filePath = "Days/_01/dat
     }
 }
 
-internal class TestPart1(string locationPath = "./") : Part1(locationPath, "Days/_01/test.txt")
+public class TestPart1() : Part1("Days/_01/test.txt")
 {
 
 }

@@ -1,12 +1,17 @@
 ﻿using aoc2K24.Helpers;
+using System.Diagnostics;
 
 namespace aoc2K24;
-internal class AbstractSolver(string filePath) : ISolver
+public class AbstractSolver(string filePath) : ISolver
 {
-    public async Task<string> Result()
+    public async Task<(string result, double elapsed)> Result()
     {
         var lines = await filePath.FromFilePathAsArray();
-        return await Run(lines);
+        var stopWatch = new Stopwatch();
+        stopWatch.Start();
+        var result = await Run(lines);
+        stopWatch.Stop();
+        return (result, stopWatch.Elapsed.TotalMilliseconds);
     }
 
     public virtual Task<string> Run(string[] lines) => Task.FromResult("");

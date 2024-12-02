@@ -1,5 +1,5 @@
 ﻿namespace aoc2K24.Helpers;
-internal static class FileHelper
+public static class FileHelper
 {
     public static async Task<string> FromFilePath(this string path)
         => await File.ReadAllTextAsync(path);
