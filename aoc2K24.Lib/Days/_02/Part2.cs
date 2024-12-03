@@ -4,10 +4,7 @@ namespace aoc2K24.Days._02;
 
 public class Part2(string filePath) : AbstractSolver(filePath)
 {
-    public Part2() : this("Days/_02/data.txt")
-    {
-        
-    }
+    public Part2() : this("Days/_02/data.txt") { }
     public override Task<string> Run(string[] lines)
     {
         static int valid(List<int> values, int sign)
@@ -25,7 +22,6 @@ public class Part2(string filePath) : AbstractSolver(filePath)
         var safe = lines.Select(l =>
         {
             var values = l.Split(' ').Select(l => Convert.ToInt32(l, CultureInfo.InvariantCulture)).ToList();
-            
             //BRUTEFORCE SA MERE PARCE QUE J'Y ARRIVE PAS
             int result = 0;
             for (int j = 0; j < values.Count; j++)

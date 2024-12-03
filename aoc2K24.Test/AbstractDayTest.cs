@@ -6,7 +6,7 @@ public abstract class AbstractDayTest<Part1, Part2>(ITestOutputHelper output)
     where Part2 : class, ISolver, new()
 {
     [Fact]
-    public async Task Part1_Test()
+    public async Task Part1_RealData()
     {
         var solver = new Part1();
         var (result, elapsed) = await solver.Result();
@@ -14,7 +14,7 @@ public abstract class AbstractDayTest<Part1, Part2>(ITestOutputHelper output)
     }
 
     [Fact]
-    public async Task Part2_Test()
+    public async Task Part2_RealData()
     {
         var solver = new Part2();
         var (result, elapsed) = await solver.Result();
