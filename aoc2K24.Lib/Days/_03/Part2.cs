@@ -8,17 +8,11 @@ public partial class Part2(string filePath) : AbstractSolver(filePath)
     public Part2() : this("Days/_03/data.txt") { }
     public override Task<string> Run(string[] lines)
     {
-        var regex = MulRegex();
-        var splits = DoDontRegex().Split(lines.Aggregate((x, y) => $"{x}{y}")).Where(s => !s.StartsWith("don't()"));
+        var line = DoDontRegex().Split(lines.Aggregate((x, y) => $"{x}{y}")).Where(s => !s.StartsWith("don't()")).Aggregate((x,y) => $"{x}{y}");
         var result = 0;
-        foreach (var line in splits)
-        {
-            foreach (Match match in regex.Matches(line))
-            {
-                result += Convert.ToInt32(match.Groups[1].Value, CultureInfo.InvariantCulture)
-                    * Convert.ToInt32(match.Groups[2].Value, CultureInfo.InvariantCulture);
-            }
-        }
+        foreach (Match match in MulRegex().Matches(line))
+            result += Convert.ToInt32(match.Groups[1].Value, CultureInfo.InvariantCulture)
+                * Convert.ToInt32(match.Groups[2].Value, CultureInfo.InvariantCulture);
         return Task.FromResult($"{result}");
     }
 
