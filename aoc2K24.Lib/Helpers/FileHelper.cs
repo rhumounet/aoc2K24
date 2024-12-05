@@ -6,6 +6,9 @@ public static class FileHelper
 
     public static async Task<string[]> FromFilePathAsArray(this string path, string split = "\r\n")
     {
-        return (await path.FromFilePath()).Split(split);
+        return (await path.FromFilePath())
+            .Replace("\r\n", Environment.NewLine)
+            .Replace("\n", Environment.NewLine)
+            .Split(Environment.NewLine);
     }
 }

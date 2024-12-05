@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Globalization;
-using System.Runtime.CompilerServices;
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 namespace aoc2K24.Days._04;
 
 public partial class Part1(string filePath) : AbstractSolver(filePath)
