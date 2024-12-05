@@ -20,6 +20,6 @@ public class Day04Tests(ITestOutputHelper helper) : AbstractDayTest<Part1, Part2
         var solver = new TestPart2();
 
         var (result, _) = await solver.Result();
-        Assert.Equal("48", result);
+        Assert.Equal("9", result);
     }
 }

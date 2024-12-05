@@ -40,7 +40,7 @@ public partial class Part2(string filePath) : AbstractSolver(filePath)
     };
 }
 
-public class TestPart2() : Part2("Days/_04/test2.txt")
+public class TestPart2() : Part2("Days/_04/test.txt")
 {
 
 }

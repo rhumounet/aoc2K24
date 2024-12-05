@@ -78,7 +78,7 @@ public partial class Part1(string filePath) : AbstractSolver(filePath)
     private static partial Regex Xmassamx();
 }
 
-public class TestPart1() : Part1("Days/_04/test1.txt")
+public class TestPart1() : Part1("Days/_04/test.txt")
 {
 
 }
